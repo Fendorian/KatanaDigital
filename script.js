@@ -7,22 +7,22 @@
   });
 let slide_data = [
     {
-      'src':'http://127.0.0.1:5500/source/slider1.jpg',
+      'src':'http://fendorian.github.io/KatanaDigital/source/slider1.jpg',
       'title':'Boost Your Online Visibility',
       'copy':'Harness the power of organic search. Our expert SEO strategies ensure your brand ranks at the top, driving qualified traffic and increased conversions.'
     },
     {
-      'src':'http://127.0.0.1:5500/source/slider2.jpg', 
+      'src':'http://fendorian.github.io/KatanaDigital/source/slider2.jpg', 
       'title':'Crafting Digital Experiences',
       'copy':'Turn visitors into loyal customers. We blend aesthetics with functionality, creating websites that are not only visually stunning but also user-friendly and optimized for conversions.'
     },
     {
-      'src':'http://127.0.0.1:5500/source/slider3.jpg', 
+      'src':'http://fendorian.github.io/KatanaDigital/source/slider3.jpg', 
       'title':'Maximize Your Social Impact',
       'copy':'Reach your audience where they engage the most. Our tailored social media ads amplify your brands message, increasing awareness and driving results.'
     },
     {
-      'src':'http://127.0.0.1:5500/source/slider4.jpg', 
+      'src':'http://fendorian.github.io/KatanaDigital/source/slider4.jpg', 
       'title':'Your One-Stop Digital Agency',
       'copy':'From search engine optimization to captivating design and impactful advertising, we provide holistic solutions that drive your business growth in the digital realm.'
     },
