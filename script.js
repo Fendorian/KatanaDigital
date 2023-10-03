@@ -1,9 +1,33 @@
-  
+document.querySelector(".hamburger").addEventListener("click", function() {
+  var mobileMenu = document.querySelector(".header-mobile-container");
+  if (mobileMenu.style.display === "none" || mobileMenu.style.display === "") {
+      mobileMenu.style.display = "flex";
+  } else {
+      mobileMenu.style.display = "none";
+  }
+});
+var hamburger = document.querySelector(".hamburger");
+var mobileMenu = document.querySelector(".header-mobile-container");
+var menuLinks = document.querySelector(".header-mobile-container ul");
+
+hamburger.addEventListener("click", function() {
+    mobileMenu.classList.add('active');
+});
+
+mobileMenu.addEventListener("click", function(event) {
+    // Check if the click is outside the menuLinks
+    if (!menuLinks.contains(event.target)) {
+        mobileMenu.classList.remove('active');
+    }
+});
+
+
+
   
   $('.multiple-items').slick({
     infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToShow: 4,
+    slidesToScroll: 1
   });
 let slide_data = [
     {
