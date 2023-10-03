@@ -32,13 +32,12 @@ mobileMenu.addEventListener("click", function(event) {
 let slide_data = [
     {
       'src':'http://fendorian.github.io/KatanaDigital/source/slider1.jpg',
-      'title':'Boost Your Online Visibility',
-      'copy':'Harness the power of organic search. Our expert SEO strategies ensure your brand ranks at the top, driving qualified traffic and increased conversions.'
+      'title':'Boost Your Online Visibility'
+      
     },
     {
       'src':'http://fendorian.github.io/KatanaDigital/source/slider2.jpg', 
-      'title':'Crafting Digital Experiences',
-      'copy':'Turn visitors into loyal customers. We blend aesthetics with functionality, creating websites that are not only visually stunning but also user-friendly and optimized for conversions.'
+      'title':'Crafting Digital Experiences'
     },
     {
       'src':'http://fendorian.github.io/KatanaDigital/source/slider3.jpg', 
@@ -100,7 +99,7 @@ let slide_data = [
          break;       
     }
     caption.appendChild(slide_title);
-    caption.insertAdjacentHTML('beforeend','<div class="caption-subhead"><span>dolor sit amet, consectetur adipiscing elit. </span></div>');
+    caption.insertAdjacentHTML('beforeend','<div class="caption-subhead"></div>');
     slides.push(slide);
     captions.push(caption);
     leftSlider.appendChild(slide);
@@ -165,3 +164,31 @@ let slide_data = [
   
     // Do something when the transition ends
   }
+
+  $(document).ready(function(){
+    $("a").on('click', function(event) {
+        var hash = this.hash;
+
+        if (hash !== "" || $(this).text() === "Home") {
+            event.preventDefault();
+
+            // Default scroll target to 50px above the section
+            var scrollTarget = $(hash).offset().top - 50;
+
+            // If the link's text is "Home", set the scroll target to the top of the page
+            if ($(this).text() === "Home") {
+                scrollTarget = 0;
+            }
+
+            $('html, body').animate({
+                scrollTop: scrollTarget
+            }, 800, function(){
+                // If not the Home link, update the URL with the hash without causing an additional jump
+                if (hash !== "") {
+                    history.pushState(null, null, hash);
+                }
+            });
+        }
+    });
+});
+

@@ -4,6 +4,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body{
   font-family: 'Lato';
   /* color: #d6f9dd; */
@@ -59,7 +62,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
@@ -238,6 +241,11 @@ header {
 }
 /* Slider */
 
+.slick-track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 img{
   max-width: 100%;
 }
@@ -694,8 +702,17 @@ flex-direction: column !important;
   .app-title:after {
     display: none;
   }
+  .caption-heading h1 
+  {
+    font-size: 32px !important;
+  }
+}
+@media screen and (max-width: 380px) {
   .caption-heading h1 {
-    font-size: 32px;
+    font-size: 24px !important;
+  }
+  .who-are-we-container {
+    width: 100%;
   }
 }
 .footer-flex {
@@ -711,4 +728,5 @@ flex-direction: column !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 20px;
 }
