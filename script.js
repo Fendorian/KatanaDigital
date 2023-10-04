@@ -26,7 +26,7 @@ mobileMenu.addEventListener("click", function(event) {
   
   $('.multiple-items').slick({
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1
   });
 let slide_data = [
@@ -154,6 +154,18 @@ let slide_data = [
       }
     }
   }
+
+  // Get all menu items inside the mobile menu
+var menuItems = document.querySelectorAll(".header-mobile-container ul li a");
+
+// Attach an event listener to each menu item
+menuItems.forEach(function(menuItem) {
+    menuItem.addEventListener("click", function() {
+        // Hide the mobile menu when a menu item is clicked
+        mobileMenu.style.display = "none";
+        mobileMenu.classList.remove('active');
+    });
+});
   
   var transitionEvent = whichTransitionEvent()
   caption.addEventListener(transitionEvent, customFunction);
@@ -191,4 +203,5 @@ let slide_data = [
         }
     });
 });
+
 

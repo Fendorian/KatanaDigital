@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+/* @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900'); */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
+
 *{
   padding: 0;
   margin: 0;
@@ -8,7 +10,8 @@ html {
   scroll-behavior: smooth;
 }
 body{
-  font-family: 'Lato';
+  /* font-family: 'Lato'; */
+  font-family: 'Fira Sans', sans-serif;
   /* color: #d6f9dd; */
 }
 section {
@@ -124,6 +127,10 @@ header {
     text-decoration: none;
     font-size: 18px;
 }
+.modern-solutions {
+  padding: 15px;
+  text-align: center;
+}
 /* Who are we */
 .who-are-we-container {
   width: 80%;
@@ -161,6 +168,7 @@ header {
 }
 .who-are-we-container .p {
   font-size: 18px;
+  padding: 15px;
 }
 /* Service */
 .service-container {
@@ -197,14 +205,14 @@ header {
   gap: 15px;
 }
 .service-card-img {
-  width: 175px;
+  width: 80px;
   background-image: url("source/fleka.svg");
   background-repeat: no-repeat;
   background-position-y: center;
   /* padding: 30px; */
   background-size: cover;
   background-position-x: 100%;
-  width: fit-content;
+  /* width: fit-content; */
   margin: auto;
 }
 .service-card-text {
@@ -213,8 +221,11 @@ header {
   line-height: 1.2;
 }
 .service-card-description {
-  font-size: 18px;
+  font-size: 16px;
   padding: 10px 0;
+}
+.service-card-inner-text {
+  width: 300px;
 }
 @media (max-width: 1440px) {
     .header-container {
@@ -445,9 +456,14 @@ img{
   }
   
 }
-
+.slide-up {
+  display: none;
+}
+.slide-down {
+  display: none;
+}
 .multiple-items img {
-  width: 400px;
+  width: 240px;
 }
 .slick-slide[data-slick-index="2"] > img {
   width: 260px;
@@ -468,7 +484,7 @@ body {
 }
 
 body, button, input {
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
   font-weight: 700;
   letter-spacing: 1.4px;
 }
@@ -707,21 +723,55 @@ flex-direction: column !important;
     font-size: 32px !important;
   }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 425px) {
+  .caption {
+    top: 45%;
+    left: 4rem;
+    margin-right: 30px;
+  }
+  .service-card {
+    width: 100%;
+  }
+  .service-card-img {
+    width: 20%;
+  }
+  .service-card-inner-text {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 380px) { 
   .caption-heading h1 {
     font-size: 24px !important;
   }
   .who-are-we-container {
     width: 100%;
   }
+  .footer-social a img {
+    width: 24px;
+  }
+  .footer-left p {
+    font-size: 11px;
+  }
+}
+.footer-facebook img {
+  width: 32px;
 }
 .footer-flex {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-bottom: 1px solid gray;
+}
+.footer-left {
+  width: 66%;
+}
+.footer-right {
+  width: 33%;
+  display: contents;
 }
 .footer-ground {
   text-align: center;
+  padding: 15px 0;
 }
 .footer-container {
   width: 100%;
@@ -729,4 +779,5 @@ flex-direction: column !important;
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
+  background-color: lightgray;
 }
