@@ -461,15 +461,6 @@ img{
 .multiple-items img {
   width: 240px;
 }
-.slick-slide[data-slick-index="0"] > img {
-  width: 140px;
-}
-.slick-slide[data-slick-index="2"] > img {
-  width: 260px;
-}
-.slick-slide[data-slick-index="3"] > img {
-  width: 220px;
-}
 /* Contact Us Form */
 *, *:before, *:after {
   box-sizing: border-box;
