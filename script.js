@@ -1,3 +1,22 @@
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  fetch(e.target.action, {
+      method: 'POST',
+      body: new FormData(e.target), // form data
+  })
+  .then((response) => {
+      if(response.ok) {
+          alert('Thank you for your message!');
+      } else {
+          alert('There was an error sending your message. Please try again.');
+      }
+  })
+  .catch(() => {
+      alert('There was a network error. Please try again.');
+  });
+});
+
+
 document.querySelector(".hamburger").addEventListener("click", function() {
   var mobileMenu = document.querySelector(".header-mobile-container");
   if (mobileMenu.style.display === "none" || mobileMenu.style.display === "") {
