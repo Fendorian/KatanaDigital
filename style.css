@@ -14,6 +14,15 @@ body{
   font-family: 'Fira Sans', sans-serif;
   /* color: #d6f9dd; */
 }
+@keyframes gravitate {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(10px);
+  }
+}
+
 section {
   padding: 48px 0;
 }
@@ -743,9 +752,24 @@ flex-direction: column !important;
     font-size: 11px;
   }
 }
+.contact-us-header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.contact-us-header img {
+  align-self: center;
+  width: 100px;
+  margin: 25px 0;
+  animation: gravitate 2s infinite; 
+}
+.contact-us-header h2 {
+  font-size: 48px;
+}
 .footer-facebook img {
   width: 32px;
 }
+
 .footer-flex {
   display: flex;
   flex-direction: row;
@@ -770,4 +794,26 @@ flex-direction: column !important;
   justify-content: space-between;
   padding: 20px;
   background-color: lightgray;
+}
+.multiple-items div img {
+  transition: transform 0.3s; /* This ensures a smooth scaling */
+}
+
+.multiple-items a:hover > img {
+  transform: scale(1.1); /* Scales the image up by 10% */
+}
+
+
+/* Tooltip styles */
+.tooltip {
+  position: absolute;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  color: white;
+  border-radius: 5px;
+  pointer-events: none; /* So it doesn't interfere with mouse events */
+  visibility: hidden; /* Initially hidden */
+  transition: transform 0.1s; /* Optional: makes movement smoother */
+  transform: translate(-50%, -70%); /* Centers tooltip on mouse position */
+  z-index: 1000; /* Ensures tooltip is on top */
 }

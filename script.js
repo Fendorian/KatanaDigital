@@ -155,6 +155,31 @@ let slide_data = [
     }
   }
 
+  document.addEventListener('DOMContentLoaded', function() {
+    // Create the tooltip element
+    var tooltip = document.createElement('div');
+    tooltip.classList.add('tooltip');
+    document.body.appendChild(tooltip);
+  
+    // Add mouseover event to each image
+    var images = document.querySelectorAll('.multiple-items div img');
+    images.forEach(function(img) {
+        img.addEventListener('mouseover', function(e) {
+            tooltip.textContent = e.target.alt; // Sets the tooltip text to the image's alt text
+            tooltip.style.visibility = 'visible';
+        });
+  
+        img.addEventListener('mousemove', function(e) {
+            tooltip.style.left = e.pageX + 'px';
+            tooltip.style.top = e.pageY + 'px';
+        });
+  
+        img.addEventListener('mouseout', function() {
+            tooltip.style.visibility = 'hidden';
+        });
+    });
+  });
+  
   // Get all menu items inside the mobile menu
 var menuItems = document.querySelectorAll(".header-mobile-container ul li a");
 
