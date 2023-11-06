@@ -45,7 +45,7 @@ mobileMenu.addEventListener("click", function(event) {
   
   $('.multiple-items').slick({
     infinite: true,
-    slidesToShow: 5,
+    slidesToShow: 6,
     slidesToScroll: 1
   });
 let slide_data = [

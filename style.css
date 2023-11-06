@@ -23,6 +23,11 @@ body{
   }
 }
 
+.slick-track {
+  width: 1200px !important;
+  justify-content: space-between;
+}
+
 section {
   padding: 48px 0;
 }
@@ -239,7 +244,7 @@ header {
 }
 /* Clients */
 .clients-container {
-  width: 80%;
+  width: 85%;
   margin: auto;
 }
 .clients-container h1 {
